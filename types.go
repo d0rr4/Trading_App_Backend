@@ -1,8 +1,13 @@
 package main
 
 
+type User struct {
+    Username string    `json:"username"`
+    Password string    `json:"password"`
+}
+
 type TSLConfig struct {
-    cert string 
-    key  string
-    port string
+    Cert string 
+    Key  string
+    Port string
 }

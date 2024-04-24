@@ -10,13 +10,13 @@ import (
 func main() {
 
     var tls_config = TSLConfig {
-        cert: "",
-        key:  "",
-        port: ":443",
+        Cert: "",
+        Key:  "",
+        Port: ":443",
     }
 
-    fmt.Println("Listening on port " + tls_config.port + "...");
-    err := http.ListenAndServeTLS(":443", tls_config.cert, tls_config.key, nil); 
+    fmt.Println("Listening on port " + tls_config.Port + "...");
+    err := http.ListenAndServeTLS(":443", tls_config.Cert, tls_config.Key, nil); 
     if err != nil {
         log.Println(err.Error())
     }
